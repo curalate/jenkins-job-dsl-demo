@@ -1,0 +1,12 @@
+# [REQUIRED] The name of the project. This value will be used as a prefix for
+# the created jobs (<PROJECT>-Pull-Request, <PROJECT>-Release, etc) and views.
+project: Banana Stand
+
+# [REQUIRED] The repository where the code lives
+repo: curalate/banana-stand
+
+# [REQUIRED] Primary email address to use for notifications
+email: gmb@curalate.com
+
+# [OPTIONAL] Commands to run for various build phases
+# command_test: mvn clean test
