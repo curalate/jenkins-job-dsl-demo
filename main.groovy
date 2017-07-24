@@ -3,11 +3,13 @@ import templates.*
 
 import hudson.FilePath
 import org.yaml.snakeyaml.Yaml
+import org.yaml.snakeyaml.constructor.CustomClassLoaderConstructor
 
 createJobs()
 
 void createJobs() {
-    def yaml = new Yaml()
+    def constr = new CustomClassLoaderConstructor(this.class.classLoader)
+    def yaml = new Yaml(constr)
 
     // Build a list of all config files ending in .yml
     def cwd = hudson.model.Executor.currentExecutor().getCurrentWorkspace().absolutize()
